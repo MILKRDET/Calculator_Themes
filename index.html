@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เครื่องคิดเลขวิทยาศาสตร์</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+    <div class="calculator-container">
+        <!-- ส่วนหัวเครื่องคิดเลข -->
+        <div class="calculator-header">
+            <h1>calculator</h1>
+            
+            <!-- ตัวเลือกธีม -->
+            <div class="theme-selector">
+                <h3></h3>
+                <div class="themes">
+                    <button class="btn-theme" data-theme="pastel" style="background: linear-gradient(135deg, #c9def4, #f5ccd4, #b8a4c9);"></button>
+                    <button class="btn-theme" data-theme="dark-blue" style="background: linear-gradient(135deg, #0a1128, #001f54, #034078);"></button>
+                    <button class="btn-theme" data-theme="earthy" style="background: linear-gradient(135deg, #f8c7cc, #81a684, #57886c);"></button>
+                    <button class="btn-theme" data-theme="contrast" style="background: linear-gradient(135deg, #2e3532, #8b2635, #e0e2db);"></button>
+                    <button class="btn-theme" data-theme="vibrant" style="background: linear-gradient(135deg, #e63946, #f1faee, #a8dadc);"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ส่วนแสดงผล -->
+        <div class="calculator-display">
+            <div class="history" id="history"></div>
+            <input type="text" id="result" readonly>
+        </div>
+
+        <!-- ส่วนปุ่มคำนวณ -->
+        <div class="calculator-buttons">
+            <!-- แถวที่ 1 -->
+            <button class="btn func" onclick="clearAll()">AC</button>
+            <button class="btn func" onclick="backspace()">⌫</button>
+            <button class="btn func" onclick="calculate('%')">%</button>
+            <button class="btn operator" onclick="calculate('/')">/</button>
+            
+            <!-- แถวที่ 2 -->
+            <button class="btn" onclick="appendValue('7')">7</button>
+            <button class="btn" onclick="appendValue('8')">8</button>
+            <button class="btn" onclick="appendValue('9')">9</button>
+            <button class="btn operator" onclick="calculate('*')">×</button>
+            
+            <!-- แถวที่ 3 -->
+            <button class="btn" onclick="appendValue('4')">4</button>
+            <button class="btn" onclick="appendValue('5')">5</button>
+            <button class="btn" onclick="appendValue('6')">6</button>
+            <button class="btn operator" onclick="calculate('-')">-</button>
+            
+            <!-- แถวที่ 4 -->
+            <button class="btn" onclick="appendValue('1')">1</button>
+            <button class="btn" onclick="appendValue('2')">2</button>
+            <button class="btn" onclick="appendValue('3')">3</button>
+            <button class="btn operator" onclick="calculate('+')">+</button>
+            
+            <!-- แถวที่ 5 -->
+            <button class="btn" onclick="appendValue('0')">0</button>
+            <button class="btn" onclick="appendValue('.')">.</button>
+            <button class="btn scientific" onclick="calculate('sqrt(')">√</button>
+            <button class="btn scientific" onclick="calculate('pow(')">x^y</button>
+            
+            <!-- แถวที่ 6 -->
+            <button class="btn equals" onclick="calculate('=')">=</button>
+            <button class="btn scientific" onclick="calculate('sin(')">sin</button>
+            <button class="btn scientific" onclick="calculate('cos(')">cos</button>
+            <button class="btn scientific" onclick="calculate('tan(')">tan</button>
+            <button class="btn scientific" onclick="calculate('log(')">log</button>
+        </div>
+
+        <!-- ส่วนประวัติการคำนวณ -->
+        <div class="calculator-history">
+            <div class="history-header">
+                <h3>ประวัติการคำนวณ</h3>
+                <button class="btn-toggle-history" onclick="toggleHistory()">▲</button>
+            </div>
+            <div class="history-content">
+                <ul id="history-list"></ul>
+                <button class="btn clear-history" onclick="clearHistory()">ลบประวัติ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/calculator.js"></script>
+</body>
+</html>

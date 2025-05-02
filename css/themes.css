@@ -1,0 +1,54 @@
+/* Theme Pastel */
+body.pastel {
+    --primary-color: #c9def4;
+    --secondary-color: #f5ccd4;
+    --accent-color: #b8a4c9;
+    --dark-color: #4738a0;
+    --light-color: #e2f0fe;
+}
+
+/* Theme Dark Blue */
+body.dark-blue {
+    --primary-color: #64a9ea;
+    --secondary-color: #97b8fa;
+    --accent-color: #4a66c3;
+    --dark-color: #053a97;
+    --light-color: #cee0f9;
+    color: white;
+}
+
+body.dark-blue .calculator-container {
+    background-color: #032c73;
+}
+
+body.dark-blue #result,
+body.dark-blue #history {
+    color: white;
+}
+
+/* Theme Earthy */
+body.earthy {
+    --primary-color: #81a684;
+    --secondary-color: #57886c;
+    --accent-color: #f8c7cc;
+    --dark-color: #4a6b63;
+    --light-color: #f1f8f1;
+}
+
+/* Theme Contrast */
+body.contrast {
+    --primary-color: #8b2635;
+    --secondary-color: #2e3532;
+    --accent-color: #e0e2db;
+    --dark-color: #2e3532;
+    --light-color: #e0e2db;
+}
+
+/* Theme Vibrant */
+body.vibrant {
+    --primary-color: #a8dadc;
+    --secondary-color: #457b9d;
+    --accent-color: #e63946;
+    --dark-color: #3e5d88;
+    --light-color: #f1faee;
+}
